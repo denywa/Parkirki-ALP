@@ -114,17 +114,6 @@ def keluar_parkir(slots, sudah_parkir, sudah_booking):
         print("Anda belum melakukan parkir.")
         return slots, sudah_parkir, sudah_booking
 
-# NOTIFIKASI
-
-
-# def notireminder():
-#     global sudah_booking
-#     if sudah_booking:
-#         popup = tk.Tk()
-#         popup.wm_title("Parkirki' Notification")
-#         label = tk.Label(popup, text="Waktu booking Anda tersisa 15 detik.")
-#         label.pack(side="top", fill="x", pady=50)
-
 
 # NOTIFIKASI
 def notibooking():
@@ -181,33 +170,6 @@ def login():
     print("Username atau password salah. Login gagal atau akun belum terdaftar.")
     time.sleep(2)
     return False
-
-#!ERORRRRRR
-# def keluar_parkir(slots, sudah_parkir):
-#     if sudah_parkir:
-#         slot_parkir = [i + 1 for i, status in enumerate(slots) if status == 'merah']
-#         if slot_parkir:
-#             slot = slot_parkir[0]  # Mengambil slot pertama yang telah diparkir
-#             confirmation = input(f"Apakah Anda ingin mengeluarkan mobil dari slot \033[31m{inp_slot}\033[0m? (Y/N): ")
-#             if confirmation.upper() == 'Y':
-#                 slots[slot - 1] = 'kosong'  # Mengubah status slot menjadi 'kosong'
-#                 print(f"Mobil berhasil keluar dari slot \033[31m{inp_slot}\033[0m")
-#                 #Append history
-#                 waktu_sekarang=datetime.now()
-#                 history.append(f"Anda keluar dari parkiran \033[31m{inp_slot}\033[0m pada {waktu_sekarang.strftime("%Y-%m-%d %H:%M")}")
-#                 return False
-#             elif confirmation.upper() == 'N':
-#                 print("Pengeluaran mobil dibatalkan.")
-#                 return True
-#             else:
-#                 print("Masukan tidak valid. Pengeluaran mobil dibatalkan.")
-#                 return True
-#         else:
-#             print("Anda belum melakukan parkir.")
-#             return True
-#     else:
-#         print("Anda belum melakukan parkir.")
-#         return 
 
 kapasitas_parkir = 100
 slot_parkir = buat_parkir(kapasitas_parkir)
